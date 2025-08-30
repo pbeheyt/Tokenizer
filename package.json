@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "@openzeppelin/contracts": "^5.4.0",
-    "ai-digest": "^1.5.1"
+    "ai-digest": "^1.5.1",
+    "dotenv": "^17.2.1"
   },
   "type": "module",
   "devDependencies": {
