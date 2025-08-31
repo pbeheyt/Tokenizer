@@ -81,7 +81,10 @@ Verification links the deployed bytecode to its source code, enabling transparen
 1.  **Run Verification**: Execute the `verify` task, providing the contract address and any constructor arguments.
     ```shell
     # Replace addresses with your own from the deployment step
-    npx hardhat verify --network bscTestnet <YOUR_CONTRACT_ADDRESS> <YOUR_WALLET_ADDRESS>
+    # Token42 (constructor: initialOwner = your wallet or the multisig if you used one)
+    npx hardhat verify --network bscTestnet <YOUR_CONTRACT_ADDRESS> <INITIAL_OWNER_ADDRESS>
+    # Token42_Bonus (constructor: initialOwner = SAFE address on BNB Testnet)
+    npx hardhat verify --network bscTestnet <YOUR_BONUS_CONTRACT_ADDRESS> <SAFE_ADDRESS>
     ```
 2.  **Interact on BscScan**:
     -   Navigate to the contract address on BscScan.

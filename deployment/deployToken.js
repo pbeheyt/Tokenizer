@@ -7,7 +7,8 @@ async function main() {
   console.log("Deploying contract with the account:", deployer.address);
 
   const tokenFactory = await ethers.getContractFactory("Token42");
-  const token = await tokenFactory.deploy(deployer.address);
+  const initialOwner = process.env.MULTISIG_OWNER_ADDRESS || deployer.address;
+  const token = await tokenFactory.deploy(initialOwner);
 
   await token.waitForDeployment();
 

@@ -6,6 +6,8 @@ This document outlines the project's technical specifications and architectural 
 
 **For a complete, step-by-step guide on project setup, configuration, and deployment, refer to the [FULL TUTORIAL](documentation/TUTORIAL.md).**
 
+**Bonus Multisig Guide**: see [documentation/BONUS_MULTISIG.md](documentation/BONUS_MULTISIG.md).
+
 ---
 
 ## Deployment Details
@@ -44,6 +46,14 @@ To ensure maximum security, the contract inherits from OpenZeppelin's profession
     npx hardhat test
     ```
 -   **Deploy to BNB Testnet**:
-    ```shell
+    ```
     npx hardhat run deployment/deployToken.js --network bscTestnet
+    ```
+-   **Verify on Explorer**:
+    ```
+    # Token42 (constructor: initialOwner = your wallet or the multisig if used)
+    npx hardhat verify --network bscTestnet <TOKEN42_ADDRESS> <INITIAL_OWNER_ADDRESS>
+
+    # Token42_Bonus (constructor: initialOwner = multisig/Safe)
+    npx hardhat verify --network bscTestnet <BONUS_TOKEN_ADDRESS> <SAFE_ADDRESS>
     ```
