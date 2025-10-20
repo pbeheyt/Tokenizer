@@ -8,7 +8,8 @@
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy": "hardhat run deployment/deployToken.js --network bscTestnet"
+    "deploy": "hardhat run deployment/deployToken.js --network bscTestnet",
+    "verify": "hardhat run deployment/verify.js --network bscTestnet"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",

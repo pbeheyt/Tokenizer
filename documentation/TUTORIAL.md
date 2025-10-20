@@ -96,18 +96,22 @@ Use this method if you prefer not to use Docker.
 
 ## 4. Contract Verification and Interaction
 
-Verification links the deployed bytecode to its source code on BscScan, enabling public transparency and a user-friendly interface for interaction.
+Verification links the deployed bytecode to its source code on BscScan. This makes the contract transparent and enables a user-friendly interface for interaction.
 
-1.  **Run Verification Command**:
-    -   Execute the `verify` task in your terminal.
-    -   You must provide the contract address (from the deployment step) and the deployer's wallet address (which was passed as a constructor argument).
+The project is configured for automated verification.
+
+1.  **Deploy the Contract**:
+    Run `make deploy`. The terminal will output the contract address and a direct link to view it on BscScan.
+
+2.  **Verify the Contract**:
+    Once the deployment transaction is confirmed on the blockchain (usually within a few seconds), run the following command:
     ```shell
-    # Replace addresses with your own
-    npx hardhat verify --network bscTestnet <YOUR_CONTRACT_ADDRESS> <YOUR_WALLET_ADDRESS>
+    make verify
     ```
+    This command automatically retrieves the deployed contract's address and verifies it on BscScan.
 
-2.  **Interact on BscScan**:
-    -   Navigate to your contract's address on BscScan.
+3.  **Interact on BscScan**:
+    -   Navigate to the BscScan URL provided during deployment.
     -   The "Contract" tab will now have a green checkmark.
     -   **Read Contract**: Call view functions. For example, use `balanceOf` with your address to check your token balance.
     -   **Write Contract**: Execute state-changing transactions. Connect your MetaMask wallet and use `transfer` to send tokens to another address.

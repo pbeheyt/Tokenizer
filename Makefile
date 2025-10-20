@@ -30,6 +30,10 @@ test:
 deploy:
 	$(COMPOSE_EXEC) npm run deploy
 
+# Verify the deployed contract on BscScan
+verify:
+	$(COMPOSE_EXEC) npm run verify
+
 # Access the container's shell
 shell:
 	$(COMPOSE_EXEC) sh
