@@ -33,27 +33,27 @@ To ensure maximum security, the contract inherits from OpenZeppelin's profession
 
 ---
 
-## Docker-Based Workflow
+## Development Workflow
 
-This project is fully containerized using Docker and Docker Compose, ensuring a consistent and reproducible development environment. A `Makefile` provides simple commands to manage the entire workflow.
+This project is fully containerized using Docker, ensuring a consistent and reproducible development environment. A `Makefile` simplifies the entire workflow into easy-to-use commands.
 
 **Prerequisites**:
--   [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
+-   Docker must be installed and running.
 
 **Usage**:
 
-1.  **Build and Start the Service**: This command builds the Docker image and starts the container in the background. It only needs to be run once initially or after modifying `Dockerfile` or `package.json`.
+1.  **Build and Start Service**: Builds the Docker image and starts the container. Run this once initially.
     ```shell
     make build
     ```
 
-2.  **Run Core Commands**:
-    -   **Compile Contracts**: `make compile`
-    -   **Run Automated Tests**: `make test`
-    -   **Deploy to BNB Testnet**: `make deploy`
-    -   **Open a Shell in the Container**: `make shell` (for running ad-hoc commands)
+2.  **Core Commands**:
+    -   `make compile`: Compiles smart contracts.
+    -   `make test`: Runs the automated test suite.
+    -   `make deploy`: Deploys the contract to BNB Testnet.
+    -   `make shell`: Opens an interactive shell inside the container.
 
-3.  **Stop the Service**: When you're done, this command stops and removes the container.
+3.  **Stop Service**: Stops and removes the container.
     ```shell
     make clean
     ```
