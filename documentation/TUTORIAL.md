@@ -45,7 +45,7 @@ A dedicated wallet for development is a security best practice. **Do not use a p
         -   **Block explorer URL**: `https://testnet.bscscan.com`
 4.  **Acquire Testnet Funds (tBNB)**:
     -   Gas fees (paid in tBNB) are required to deploy contracts.
-    -   Use a developer-friendly faucet like the **Triangle Platform Faucet**: [faucet.triangleplatform.com/bnb/testnet](https://faucet.triangleplatform.com/bnb/testnet).
+    -   Use a developer-friendly faucet like the **Bnbchain Faucet**: [tBNB Faucet](https://docs.bnbchain.org/bnb-smart-chain/developers/faucet/).
     -   Paste your wallet's `0x...` address to receive funds.
 
 ### Step 2: Environment Setup (`.env`)
