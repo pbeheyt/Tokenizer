@@ -4,7 +4,9 @@ This repository contains the source code, tests, and deployment scripts for the 
 
 This document outlines the project's technical specifications and architectural justifications.
 
-**For a complete, step-by-step guide on project setup, configuration, and deployment, refer to the [FULL TUTORIAL](documentation/TUTORIAL.md).**
+**Key Documentation**:
+-   For a complete, step-by-step guide on project setup, configuration, and deployment, refer to the [**FULL TUTORIAL**](documentation/TUTORIAL.md).
+-   For a detailed breakdown of the Solidity syntax used in the smart contract, see our [**SOLIDITY GUIDE**](documentation/SOLIDITY_GUIDE.md).
 
 ---
 
