@@ -5,8 +5,9 @@ This repository contains the source code, tests, and deployment scripts for the 
 This document outlines the project's technical specifications and architectural justifications.
 
 **Key Documentation**:
--   For a complete, step-by-step guide on project setup, configuration, and deployment, refer to the [**FULL TUTORIAL**](documentation/TUTORIAL.md).
--   For a detailed breakdown of the Solidity syntax used in the smart contract, see our [**SOLIDITY GUIDE**](documentation/SOLIDITY_GUIDE.md).
+-   [**FULL TUTORIAL**](documentation/TUTORIAL.md): A complete guide on project setup, configuration, and deployment.
+-   [**SOLIDITY GUIDE**](documentation/SOLIDITY_GUIDE.md): A detailed breakdown of the Solidity syntax used in the smart contract.
+-   [**JS SCRIPTS GUIDE**](documentation/JS_SCRIPTS_GUIDE.md): An explanation of the deployment and verification scripts and the Ethers.js concepts they use.
 
 ---
 

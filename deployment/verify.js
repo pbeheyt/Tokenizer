@@ -1,10 +1,15 @@
+/**
+ * @file This script verifies the deployed Token42 contract on BscScan.
+ * It reads the contract address from a file generated during deployment,
+ * making the process automatic and error-proof.
+ */
 import pkg from "hardhat";
-const { run, network } = pkg;
+const { run } = pkg;
 import fs from "fs";
 import path from "path";
 
 async function main() {
-  // 1. Read deployment information
+  // 1. Read deployment information from the JSON file
   let deploymentInfo;
   try {
     const filePath = path.join(process.cwd(), ".deployment-info.json");
@@ -25,9 +30,9 @@ async function main() {
   }
 
   console.log(`Verifying contract at: ${contractAddress}`);
-  console.log(`Deployer address: ${deployerAddress}`);
+  console.log(`Deployer address (constructor argument): ${deployerAddress}`);
 
-  // 2. Run the Hardhat verify task
+  // 2. Run the Hardhat verify task programmatically
   try {
     await run("verify:verify", {
       address: contractAddress,
@@ -35,6 +40,7 @@ async function main() {
     });
     console.log("Contract verification successful!");
   } catch (error) {
+    // Handle the case where the contract is already verified
     if (error.message.toLowerCase().includes("already verified")) {
       console.log("Contract is already verified.");
     } else {
